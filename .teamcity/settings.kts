@@ -66,7 +66,7 @@ object BuildWithTemplate : BuildType({
             name = "OneMore Step"
             id = "OneMore_Step"
             enabled = false
-            scriptContent = "ps -a"
+            scriptContent = "cat Reaadme.md"
         }
         script {
             id = "simpleRunner"
