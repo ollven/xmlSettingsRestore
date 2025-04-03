@@ -57,6 +57,10 @@ object BuildWithTemplate : BuildType({
     templates(id3Steps)
     name = "BuildWithTemplate"
 
+    vcs {
+        root(HttpsGithubComOllvenXmlSettingsRestoreCode)
+    }
+
     steps {
         script {
             name = "OneMore Step"
