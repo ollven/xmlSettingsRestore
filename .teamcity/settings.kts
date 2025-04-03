@@ -48,6 +48,10 @@ object BuildWithTemplate : BuildType({
             id = "OneMore_Step"
             scriptContent = "ps -a"
         }
+        script {
+            id = "simpleRunner"
+            scriptContent = """echo "new step""""
+        }
     }
 })
 
