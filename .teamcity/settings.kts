@@ -41,6 +41,10 @@ object BuildToTemplate : BuildType({
     templates(id3Steps)
     name = "Build to template"
 
+    vcs {
+        root(HttpsGithubComOllvenXmlSettingsRestoreCode)
+    }
+
     triggers {
         vcs {
             id = "TRIGGER_1"
