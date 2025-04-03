@@ -65,7 +65,7 @@ object BuildWithTemplate : BuildType({
         script {
             name = "OneMore Step"
             id = "OneMore_Step"
-            scriptContent = "cat Reaadme.md"
+            scriptContent = "cat Readme.md"
         }
         script {
             id = "simpleRunner"
