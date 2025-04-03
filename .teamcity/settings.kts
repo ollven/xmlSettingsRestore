@@ -62,6 +62,13 @@ object BuildWithTemplate : BuildType({
             scriptContent = """echo "new step""""
         }
     }
+
+    triggers {
+        vcs {
+            id = "TRIGGER_2"
+            branchFilter = ""
+        }
+    }
 })
 
 object id3Steps : Template({
