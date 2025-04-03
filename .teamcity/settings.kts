@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -27,6 +28,8 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2025.03"
 
 project {
+
+    vcsRoot(HttpsGithubComOllvenXmlSettingsRestoreCode)
 
     buildType(BuildWithTemplate)
     buildType(BuildToTemplate)
@@ -91,5 +94,15 @@ object id3Steps : Template({
             id = "Step3"
             scriptContent = "ls -a"
         }
+    }
+})
+
+object HttpsGithubComOllvenXmlSettingsRestoreCode : GitVcsRoot({
+    name = "https://github.com/ollven/xmlSettingsRestoreCode"
+    url = "https://github.com/ollven/xmlSettingsRestoreCode"
+    branch = "refs/heads/main"
+    authMethod = password {
+        userName = "ollven"
+        password = "credentialsJSON:00475aef-e01c-4f15-a063-34ec1c7a8a22"
     }
 })
