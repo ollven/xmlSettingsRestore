@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -36,6 +37,13 @@ project {
 object BuildToTemplate : BuildType({
     templates(id3Steps)
     name = "Build to template"
+
+    triggers {
+        vcs {
+            id = "TRIGGER_1"
+            branchFilter = ""
+        }
+    }
 })
 
 object BuildWithTemplate : BuildType({
